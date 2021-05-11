@@ -38,7 +38,7 @@ export default function Home() {
               <p>
                 <strong>Releasing Date :</strong> 05 - 08 - 2021
               </p>
-              <p>
+              <p className="text-justify">
                 <strong>Description :</strong> Lorem ipsum dolor sit amet
                 consectetur adipisicing elit. Dolores, suscipit architecto
                 consectetur accusamus saepe assumenda, culpa, nisi quidem
