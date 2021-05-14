@@ -5,7 +5,13 @@ export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light " width={100}>
       <Link href="/">
-        <a className="navbar-brand ">Elif Shafak</a>
+        <a
+          className="navbar-brand"
+          data-toggle="collapse"
+          data-target="#navbarNav1"
+        >
+          Elif Shafak
+        </a>
       </Link>
       <button
         className="navbar-toggler"
@@ -75,12 +81,12 @@ export default function Navbar() {
         </ul>
       </div>
       <style jsx>{`
-        @media screen and (min-width: 992px) { 
+        @media screen and (min-width: 992px) {
           .mobile {
             display: none !important;
           }
         }
-        @media screen and (max-width: 991px) { 
+        @media screen and (max-width: 991px) {
           .desktop {
             display: none !important;
           }
