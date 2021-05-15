@@ -1,7 +1,12 @@
-import Link from "next/link"
+import Link from "next/link";
+import { useRouter } from "next/router";
+
+
 
 
 export default function Navbar() {
+        const router = useRouter();
+        // const { locale } = router;
   return (
     <nav className="navbar navbar-expand-lg navbar-light " width={100}>
       <Link href="/">
@@ -41,6 +46,15 @@ export default function Navbar() {
               <a className="nav-link">Books</a>
             </Link>
           </li>
+          <div className="d-flex">
+            {router.locales.map((locale) => (
+              <li className="nav-item" key={locale}>
+                <Link href={router.asPath} locale={locale}>
+                  <a className="nav-link">{locale}</a>
+                </Link>
+              </li>
+            ))}
+          </div>
         </ul>
       </div>
       <div className="collapse navbar-collapse mobile" id="navbarNav1">
@@ -78,6 +92,23 @@ export default function Navbar() {
               </a>
             </Link>
           </li>
+          <div className="d-flex">
+            <ul>
+              {router.locales.map((locale) => (
+                <li className="nav-item" key={locale}>
+                  <Link href={router.asPath} locale={locale}>
+                    <a
+                      className="nav-link"
+                      data-toggle="collapse"
+                      data-target="#navbarNav1"
+                    >
+                      {locale}
+                    </a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </ul>
       </div>
       <style jsx>{`
@@ -90,6 +121,12 @@ export default function Navbar() {
           .desktop {
             display: none !important;
           }
+        }
+        .tr {
+          padding-left: 0 !important;
+        }
+        .traduction {
+          margin-left: 10px;
         }
       `}</style>
     </nav>
