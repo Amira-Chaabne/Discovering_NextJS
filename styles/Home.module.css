@@ -1,3 +1,4 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Philosopher&display=swap"); */
 .container {
   min-height: 80vh;
   padding: 0 0.5rem;
@@ -66,3 +67,25 @@
 .coming h2 {
   margin: 0;
 }
+/***/
+.tListMobile{
+      display: flex;
+    list-style-type: none;
+    padding: 0
+}
+.tListMobile li{
+  padding-right: 10px;
+  text-transform: capitalize;
+}
+.tListDesktop{
+  display: flex;
+}
+.tListDesktop li a{
+  text-transform: capitalize !important;
+}
+
+/**/
+/* .brandName {
+  font-family: "Philosopher", "Lato" !important;
+  font-size: 30px;
+} */

@@ -1,5 +1,8 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import styles from "../styles/Home.module.css";
+
+
 
 export default function Navbar() {
   const router = useRouter();
@@ -12,7 +15,7 @@ export default function Navbar() {
           data-toggle="collapse"
           data-target="#navbarNav1"
         >
-          Elif Shafak
+          <span className={styles.brandName}>Elif Shafak</span>
         </a>
       </Link>
       <button
@@ -43,7 +46,7 @@ export default function Navbar() {
               <a className="nav-link">Books</a>
             </Link>
           </li>
-          <div className="d-flex">
+          <div className={styles.tListDesktop}>
             {router.locales.map((locale) => (
               <li className="nav-item" key={locale}>
                 <Link href={router.asPath} locale={locale}>
@@ -89,8 +92,8 @@ export default function Navbar() {
               </a>
             </Link>
           </li>
-          <div className="d-flex">
-            <ul>
+          <div>
+            <ul className={styles.tListMobile}>
               {router.locales.map((locale) => (
                 <li className="nav-item" key={locale}>
                   <Link href={router.asPath} locale={locale}>
