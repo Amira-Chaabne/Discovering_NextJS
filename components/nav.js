@@ -1,12 +1,9 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-
-
-
 export default function Navbar() {
-        const router = useRouter();
-        // const { locale } = router;
+  const router = useRouter();
+  // const { locale } = router;
   return (
     <nav className="navbar navbar-expand-lg navbar-light " width={100}>
       <Link href="/">

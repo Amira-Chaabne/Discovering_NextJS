@@ -4,9 +4,10 @@ import Image from "next/image";
 import Data from '../../data.json'
 export default function Books(){
     return (
-      <div className={styles.container}>
+      <main className={styles.container}>
         <Head>
           <title>Books</title>
+          <meta name="description" content="Elif Shafak author website books" />
         </Head>
         <h1>Elif's Books</h1>
         <div className={styles.contentBooksPage}>
@@ -18,7 +19,7 @@ export default function Books(){
                   layout="intrinsic"
                   height={280}
                   width={180}
-                  alt="Elif Shafak Author"
+                  alt="Elif Shafak old books"
                 />
                 <h4>{booksDetails.name}</h4>
                 <p>{booksDetails.description} </p>
@@ -27,6 +28,6 @@ export default function Books(){
             );
           })}
         </div>
-      </div>
+      </main>
     );
   }

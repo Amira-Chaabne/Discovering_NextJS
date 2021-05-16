@@ -10,21 +10,22 @@ import { useRouter } from "next/router";
       const { locale } = router;
       const t = locale === "tr" ? tr : en;
     return (
-      <div className={styles.container}>
+      <main className={styles.container}>
         <Head>
           <title>About the Author</title>
+          <meta name="description" content="Elif Shafak author website About Biography" />
         </Head>
-        <main className={styles.main}>
+        <div className={styles.main}>
           <Image
             src="/picture.jpg"
             layout="intrinsic"
             height={450}
             width={800}
-            alt="Elif Shafak Author"
+            alt="picture of Elif Shafak"
           />
           <h1 className="mt-3">{t.AboutPageName}</h1>
           <p className="container text-center">{t.AboutPageBiography}</p>
-        </main>
-      </div>
+        </div>
+      </main>
     );
   }

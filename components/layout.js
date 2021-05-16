@@ -3,7 +3,7 @@ import Navbar from "./nav";
 
 const Layout = ({ children }) => {
   return (
-    <div className="allContent">
+    <main className="allContent">
       <Navbar />
       {children}
       <Footer />
@@ -22,7 +22,7 @@ const Layout = ({ children }) => {
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossOrigin="anonymous"
       ></script>
-    </div>
+    </main>
   );
 };
 export default Layout;
