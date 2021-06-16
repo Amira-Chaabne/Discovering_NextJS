@@ -13,7 +13,10 @@ export default function Home() {
     <main className={styles.container}>
       <Head>
         <title>Elif Shafak</title>
-        <meta name="description" content="Elif Shafak author website Home page" />
+        <meta
+          name="description"
+          content="Elif Shafak author website Home page"
+        />
       </Head>
 
       <div className={styles.main}>
@@ -32,6 +35,7 @@ export default function Home() {
                 height={320}
                 width={215}
                 alt="New book releasing soon"
+                placeholder="blur"
               />
             </div>
             <div className="col-md-9 mt-4">

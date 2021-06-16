@@ -20,6 +20,7 @@ export default function Books(){
                   height={280}
                   width={180}
                   alt="Elif Shafak old books"
+                  placeholder="blur"
                 />
                 <h4>{booksDetails.name}</h4>
                 <p>{booksDetails.description} </p>
